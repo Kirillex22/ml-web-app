@@ -17,3 +17,4 @@
 Зябрев Кирилл Сергеевич
 
 ## Ссылка на развернутую версию
+https://ml-web-app-fpmbjnvcpz34ma2czdet7c.streamlit.app/
