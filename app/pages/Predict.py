@@ -29,11 +29,15 @@ def data_input(names, values):
     st.header("Введите данные")
     user_input = np.zeros(12)
 
-    for i in range(12):
+    for i in range(11):
         user_input[i] = st.number_input(names[i], min_value=float(min(values[i])), max_value=float(max(values[i])), value=float(statistics.mean(values[i])))
+
+    colors = ['белый', 'красный']
+    color = st.radio("сolor", colors)  
 
     ch = st.checkbox('Подтвердить данные')
     if (ch):
+        user_input[11] = colors.index(color)
         data = pd.DataFrame(user_input.reshape(1, -1), columns = names)
         return data
 
